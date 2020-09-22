@@ -31,6 +31,7 @@ body {
   width: 100%;
   font-weight: 500;
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 h1,
@@ -45,6 +46,61 @@ header {
   margin: 1rem auto;
   height: 8vh;
   align-items: center;
+  overflow: hidden;
+}
+
+.menu-icon {
+  position: relative;
+}
+
+nav {
+  position: fixed;
+  top: 10%;
+  width: 90%;
+  margin: 0 auto;
+  height: 60vh;
+  background: var(--bg-icon);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateX(110%);
+  transition: all 0.5s ease;
+}
+
+.navbar-open {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+nav ul {
+  margin: 1rem auto 0 auto;
+  width: 90%;
+}
+
+nav li {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+nav .line {
+  width: 90%;
+  margin: 0 auto;
+  background: var(--text-color);
+  height: 1px;
+}
+
+nav #signup-button {
+  width: 100%;
+  color: var(--primary-color);
+  background: var(--bg-button);
+  height: 7vh;
+  border-radius: 50px;
+  line-height: 7vh;
 }
 
 .container {
@@ -52,6 +108,7 @@ header {
   flex-direction: column;
   margin: 0 auto;
   background: var(--primary-color);
+  overflow: hidden;
 }
 
 .illustration {
