@@ -345,3 +345,45 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+
+/* Shortened Link */
+
+.shortened-list {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  flex-direction: column;
+  height: auto;
+}
+
+.shortened-url {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  background: var(--primary-color);
+}
+
+.shortened-url .url-name {
+  color: var(--title-color);
+}
+
+.shortened-url .line-url {
+  width: 100;
+  background: var(--text-color);
+  margin: 1rem 0;
+  height: 1px;
+}
+
+.shortened-url .shortlink {
+  color: var(--text-color);
+}
+
+.shortened-url .copy-url {
+  background: var(--bg-button);
+  color: var(--primary-color);
+  width: 100%;
+  height: 5vh;
+  text-align: center;
+}
