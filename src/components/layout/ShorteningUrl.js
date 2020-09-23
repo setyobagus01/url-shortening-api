@@ -1,44 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useContext } from "react";
 import { ReactComponent as ShortenMobileIcon } from "../../images/bgshortenmobile.svg";
-import axios from "axios";
+
+import { ShortenContext } from "../../ShortenContext";
 
 function ShorteningUrl() {
   const [url, setUrl] = useState("");
-  const [shortening, setShortening] = useState([]);
-  const [shortlink, setShorlink] = useState("");
+  const createLinks = useContext(ShortenContext);
 
   function handleShortening(e) {
     e.preventDefault();
-    setShorlink("");
-
-    const fetchUrl = async () => {
-      return await axios
-        .post(`https://rel.ink/api/links/`, {
-          url: `${url}`,
-        })
-        .then((res) => setShortening(res.data))
-        .catch((err) => console.log(err));
-    };
-    fetchUrl();
-
-    setShorlink(`https://rel.ink/${shortening.hashid}`);
-
-    console.log(shortening);
+    createLinks(url);
+    console.log(url);
   }
 
   return (
-    <div className="shorten-container">
-      <ShortenMobileIcon className="bg-shorten" />
-      <form onSubmit={handleShortening}>
-        <input
-          type="text"
-          value={url}
-          onChange={(e) => setUrl(e.target.value)}
-          placeholder="Shorten a link here..."
-        />
-        <button id="shorten">Shorten it!</button>
-      </form>
-    </div>
+    <>
+      <div className="shorten-container">
+        <ShortenMobileIcon className="bg-shorten" />
+        <form onSubmit={handleShortening}>
+          <input
+            type="text"
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+            placeholder="Shorten a link here..."
+          />
+          <button id="shorten">Shorten it!</button>
+        </form>
+      </div>
+    </>
   );
 }
 
