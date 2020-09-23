@@ -6,17 +6,20 @@ import ShorteningUrl from "./components/layout/ShorteningUrl";
 import MainContent from "./components/layout/MainContent";
 import Boost from "./components/layout/Boost";
 import Footer from "./components/layout/Footer";
+import { ShortenProvider } from "./ShortenContext";
 
 function App() {
   return (
-    <div className="container">
-      <Header />
-      <TopWrapper />
-      <ShorteningUrl />
-      <MainContent />
-      <Boost />
-      <Footer />
-    </div>
+    <ShortenProvider>
+      <div className="container">
+        <Header />
+        <TopWrapper />
+        <ShorteningUrl />
+        <MainContent />
+        <Boost />
+        <Footer />
+      </div>
+    </ShortenProvider>
   );
 }
 
