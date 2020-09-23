@@ -2,11 +2,21 @@ import React from "react";
 import { ReactComponent as BrandIcon } from "../../images/iconbrandrecognition.svg";
 import { ReactComponent as DetailedIcon } from "../../images/icondetailedrecords.svg";
 import { ReactComponent as FullyIcon } from "../../images/iconfullycustomizable.svg";
+import ShortenedLink from "../ShortenedLink";
+import { ShortenLink } from "../../ShortenContext";
 
 function MainContent() {
+  const shortenlinks = React.useContext(ShortenLink);
+
   return (
     <section className="content">
-      <div class="content-description">
+      {shortenlinks.map((shortenlink) => {
+        return (
+          <ShortenedLink key={shortenlink.hashid} shortenlink={shortenlink} />
+        );
+      })}
+
+      <div className="content-description">
         <h1>Advance Statistics</h1>
         <p>
           Track how your links are performing across the web with our advanced
