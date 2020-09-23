@@ -3,7 +3,7 @@ import { ReactComponent as FooterBg } from "../../images/bgboostmobile.svg";
 
 function Boost() {
   return (
-    <section class="boost-container">
+    <section className="boost-container">
       <FooterBg />
       <div className="boost-content">
         <h2>Boost your links today</h2>
