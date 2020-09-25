@@ -51,6 +51,7 @@ header {
 
 .menu-icon {
   position: relative;
+  width: 30px;
 }
 
 nav {
@@ -68,6 +69,7 @@ nav {
   opacity: 0;
   transform: translateX(110%);
   transition: all 0.5s ease;
+  z-index: 10;
 }
 
 .navbar-open {
@@ -238,6 +240,7 @@ nav #signup-button {
   position: absolute;
   right: 0;
   z-index: 1;
+  border-radius: 5px;
 }
 .shorten-container form {
   position: absolute;
@@ -363,10 +366,13 @@ footer {
   height: auto;
   padding: 1rem;
   background: var(--primary-color);
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
 }
 
 .shortened-url .url-name {
   color: var(--title-color);
+  font-size: 1rem;
 }
 
 .shortened-url .line-url {
@@ -377,13 +383,249 @@ footer {
 }
 
 .shortened-url .shortlink {
-  color: var(--text-color);
+  color: var(--bg-button);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .shortened-url .copy-url {
   background: var(--bg-button);
   color: var(--primary-color);
   width: 100%;
-  height: 5vh;
+  height: 6vh;
   text-align: center;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+/* Error log */
+.error {
+  color: hsl(0, 87%, 67%);
+  font-size: 14px;
+  margin: 0.5rem 0;
+}
+
+/* Responsive */
+
+@media screen and (min-width: 414px) {
+  .boost-container {
+    height: 41vh;
+  }
+
+  .boost-container svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media screen and (min-height: 812px) {
+  .boost-container {
+    height: 37vh;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  header .menu-icon {
+    width: 40px;
+  }
+
+  header svg:nth-child(1) {
+    transform: scale(1.2);
+    margin-left: 0.65rem;
+  }
+
+  nav {
+    height: 50vh;
+    width: 80%;
+    margin-left: 5%;
+  }
+
+  .illustration {
+    height: 75vh;
+  }
+
+  .illustration g {
+    transform: scale(1.5);
+  }
+
+  .top-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .top-content h1 {
+    font-size: 3rem;
+  }
+
+  .top-button {
+    width: 70%;
+    font-size: 1.5rem;
+  }
+
+  .shorten-container input {
+    font-size: 1.5rem;
+  }
+
+  .shorten-container button {
+    font-size: 1.5rem;
+  }
+
+  /* Content */
+
+  .content {
+    padding-top: 15rem;
+  }
+
+  /* Shortening UI */
+
+  .shortened-url {
+    padding: 1.6rem;
+  }
+
+  .shortened-url .url-name {
+    font-size: 1.6rem;
+  }
+
+  .shortened-url .line-url {
+    margin: 1.6rem 0;
+  }
+
+  .shortened-url .shortlink {
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .shortened-url .copy-url {
+    font-size: 1.5rem;
+  }
+
+  .content-description {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+  }
+
+  .content-benefit {
+    height: 40vh;
+  }
+
+  .benefit {
+    height: 35vh;
+  }
+
+  .benefit .benefit-icon {
+    top: -5.5vh;
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    left: 42.5%;
+  }
+
+  .benefit-icon svg {
+    transform: scale(1.4);
+  }
+
+  .benefit h3 {
+    font-size: 2rem;
+  }
+
+  .benefit-description p {
+    font-size: 1.3rem;
+  }
+
+  .boost-container svg {
+    top: 10%;
+    transform: scale(1.25);
+  }
+
+  footer {
+    padding: 5rem 0;
+  }
+
+  footer svg:nth-child(1) {
+    transform: scale(1.5);
+  }
+
+  .footer-list .title-list {
+    font-size: 1.7rem;
+  }
+
+  .footer-list li {
+    font-size: 1.2rem;
+  }
+
+  footer .social-media > svg {
+    transform: scale(1.5);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 2rem;
+  }
+
+  header .menu-icon {
+    width: 50px;
+  }
+
+  header svg:nth-child(1) {
+    transform: scale(1.5);
+    margin-left: 1.7rem;
+  }
+
+  .illustration {
+    height: 75vh;
+  }
+
+  .illustration g {
+    transform: scale(2);
+  }
+
+  .top-content {
+    margin-top: 5rem;
+  }
+
+  .top-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .top-content p {
+    font-size: 2rem;
+  }
+
+  .top-button {
+    font-size: 2rem;
+  }
+
+  /* Shortening URL */
+
+  .shorten-container input {
+    font-size: 2rem;
+  }
+
+  .shorten-container button {
+    font-size: 2rem;
+  }
+
+  .shortened-list {
+    margin-top: 5rem;
+  }
+
+  .shortened-url .url-name,
+  .shortlink,
+  .copy-url {
+    font-size: 2rem;
+  }
+
+  .content-description {
+    margin-top: 5rem;
+  }
 }

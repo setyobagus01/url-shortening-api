@@ -10,11 +10,16 @@ function MainContent() {
 
   return (
     <section className="content">
-      {shortenlinks.map((shortenlink) => {
-        return (
-          <ShortenedLink key={shortenlink.hashid} shortenlink={shortenlink} />
-        );
-      })}
+      {shortenlinks.length
+        ? shortenlinks.map((shortenlink) => {
+            return (
+              <ShortenedLink
+                key={shortenlink.hashid}
+                shortenlink={shortenlink}
+              />
+            );
+          })
+        : null}
 
       <div className="content-description">
         <h1>Advance Statistics</h1>

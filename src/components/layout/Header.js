@@ -8,11 +8,7 @@ function Header() {
   return (
     <header>
       <Logo />
-      <Hamburger
-        className="menu-icon"
-        onClick={() => setActive(!active)}
-        style={{ width: "30px" }}
-      />
+      <Hamburger className="menu-icon" onClick={() => setActive(!active)} />
 
       <Navbar active={active} />
     </header>
