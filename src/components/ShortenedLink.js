@@ -20,25 +20,23 @@ function ShortenedLink({ shortenlink }) {
   };
 
   return (
-    <div className="shortened-list">
-      <div className="shortened-url">
-        <span className="url-name">
-          {shortenlink === undefined ? "No Links" : shortenlink.url}
-        </span>
-        <div className="line-url"></div>
-        <span ref={shortenRef} className="shortlink">
-          {shortenlink === undefined
-            ? "No Shorten"
-            : `https://rel.ink/${shortenlink.hashid}`}
-        </span>
-        <button
-          style={styleButton}
-          onClick={handleClipboard}
-          className="copy-url"
-        >
-          {copied ? copied : "Copy"}
-        </button>
-      </div>
+    <div className="shortened-url">
+      <span className="url-name">
+        {shortenlink === undefined ? "No Links" : shortenlink.url}
+      </span>
+      <div className="line-url"></div>
+      <span ref={shortenRef} className="shortlink">
+        {shortenlink === undefined
+          ? "No Shorten"
+          : `https://rel.ink/${shortenlink.hashid}`}
+      </span>
+      <button
+        style={styleButton}
+        onClick={handleClipboard}
+        className="copy-url"
+      >
+        {copied ? copied : "Copy"}
+      </button>
     </div>
   );
 }

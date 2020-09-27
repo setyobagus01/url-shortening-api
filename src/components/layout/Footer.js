@@ -9,30 +9,70 @@ function Footer() {
   return (
     <footer>
       <Logo className="logo-footer" />
-      <div class="list-wrapper">
+      <div className="list-wrapper">
         <div className="footer-list">
           <span className="title-list">Features</span>
           <ul>
-            <li>Link Shortening</li>
-            <li>Branded Links</li>
-            <li>Analytics</li>
+            <li>
+              <a href="#" target="_blank">
+                Link Shortening
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                Branded Links
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                Analytics
+              </a>
+            </li>
           </ul>
         </div>
         <div className="footer-list">
           <span className="title-list">Resource</span>
           <ul>
-            <li>Blog</li>
-            <li>Developers</li>
-            <li>Support</li>
+            <li>
+              <a href="#" target="_blank">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                Developers
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                Support
+              </a>
+            </li>
           </ul>
         </div>
         <div className="footer-list">
           <span className="title-list">Company</span>
           <ul>
-            <li>About</li>
-            <li>Our Team</li>
-            <li>Careers</li>
-            <li>Contact</li>
+            <li>
+              <a href="#" target="_blank">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                Our Team
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                Careers
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
       </div>

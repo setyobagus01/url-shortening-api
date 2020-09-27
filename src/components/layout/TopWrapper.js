@@ -3,7 +3,7 @@ import { ReactComponent as Illustration } from "../../images/illustrationworking
 
 function TopWrapper() {
   return (
-    <>
+    <div className="top-container">
       <Illustration className="illustration" />
       <section className="top-content">
         <h1>More than just shorter links</h1>
@@ -13,7 +13,7 @@ function TopWrapper() {
         </p>
         <button className="top-button">Get Started</button>
       </section>
-    </>
+    </div>
   );
 }
 
