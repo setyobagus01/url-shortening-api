@@ -1,11 +1,11 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "URL Shortening",
+  "name": "URL Shortening using rel.ink",
   "icons": [
     {
       "src": "favicon-32x32.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/.png"
+      "type": "image/png"
     },
     {
       "src": "favicon-32x32.png",
