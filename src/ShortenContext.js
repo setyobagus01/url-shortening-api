@@ -22,7 +22,6 @@ export function ShortenProvider({ children }) {
     });
   }
 
-  console.log(shortenlinks);
   return (
     <ShortenContext.Provider value={createLinks}>
       <ShortenLink.Provider value={shortenlinks}>

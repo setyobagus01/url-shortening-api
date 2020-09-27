@@ -1,11 +1,14 @@
 import React, { useState, useContext } from "react";
 import { ReactComponent as ShortenMobileIcon } from "../../images/bgshortenmobile.svg";
-
+import { ReactComponent as ShortenDesktopIcon } from "../../images/bgshortendesktop.svg";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { ShortenContext } from "../../ShortenContext";
 
 function ShorteningUrl() {
   const [url, setUrl] = useState("");
   const [error, setError] = useState(null);
+  const { width } = useWindowDimensions();
+
   const createLinks = useContext(ShortenContext);
 
   const pattern = new RegExp(
@@ -20,31 +23,35 @@ function ShorteningUrl() {
 
   function handleShortening(e) {
     e.preventDefault();
-
     if (url.match(pattern)) {
       createLinks(url);
       setError("");
     } else {
       setError("Please add a link");
     }
-
-    console.log(url);
   }
 
   return (
     <div
       className="shorten-container"
-      style={{ height: error ? "30vh" : "25vh" }}
+      style={width <= 1024 ? { height: error ? "30vh" : "25vh" } : null}
     >
-      <ShortenMobileIcon className="bg-shorten" />
+      {width <= 1024 ? (
+        <ShortenMobileIcon className="bg-shorten" />
+      ) : (
+        <ShortenDesktopIcon className="bg-shorten" />
+      )}
       <form autoComplete="on" onSubmit={handleShortening}>
-        <input
-          type="text"
-          value={url}
-          onChange={(e) => setUrl(e.target.value)}
-          placeholder="Shorten a link here..."
-        />
-        {error ? <span className="error">{error}</span> : null}
+        <div className="input-wrapper">
+          <input
+            style={{ border: error ? "3px solid var(--bg-error)" : "none" }}
+            type="text"
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+            placeholder="Shorten a link here..."
+          />
+          {error ? <span className="error">{error}</span> : null}
+        </div>
         <button id="shorten">Shorten it!</button>
       </form>
     </div>
