@@ -1086,12 +1086,20 @@ footer {
 }
 
 @media screen and (min-width: 1280px) {
+  .content-benefit {
+    height: 50vh;
+  }
+
   .benefit {
     height: 50vh;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  .content-benefit {
+    height: 35vh;
+  }
+
   .benefit {
     height: 35vh;
   }
