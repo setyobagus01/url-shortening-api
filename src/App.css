@@ -1105,8 +1105,55 @@ footer {
   }
 }
 
+@media screen and (min-height: 1500px) {
+  nav #signup-button {
+    height: 3vh;
+    line-height: 3vh;
+  }
+
+  .top-button {
+    height: 3.5vh;
+  }
+
+  /* Shortening URL*/
+  .shorten-container {
+    height: 10vh;
+  }
+
+  .shorten-container input {
+    height: 4vh;
+  }
+
+  .shorten-container button {
+    height: 4vh;
+  }
+
+  .benefit-container {
+    height: 30vh;
+  }
+
+  .benefit,
+  .content-benefit {
+    height: 20vh;
+  }
+
+  .boost-container {
+    height: 18vh;
+  }
+
+  .top-button:nth-child(2) {
+    height: 3.5vh;
+  }
+}
+
 @media screen and (min-width: 1550px) {
   .top-content {
     width: 40%;
+  }
+}
+
+@media screen and (min-height: 1800px) {
+  .boost-container {
+    height: 15vh;
   }
 }
